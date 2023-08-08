@@ -1,0 +1,15 @@
+<div class="navbar">
+    <h1>Instagram</h1>
+    <input type="text" placeholder="Search">
+    <div class="icons">
+        <img src="/assets/home.svg" alt="">
+        <img src="/assets/chat.svg" alt="">
+        <img src="/assets/post.svg" alt="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <img src="/assets/exp.svg" alt="">
+        <img src="/assets/heart.svg" alt="">
+        <%= button_to image_tag("/assets/logout.svg") , destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <div class="profile_pic"></div>
+    </div>
+</div>
+
+<%= render 'posts/form', post: Post.new %>

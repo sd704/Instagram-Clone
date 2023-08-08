@@ -1,0 +1,50 @@
+.navbar {
+    background: #fafafa;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #d3d3d3;
+
+    padding-left: 100px;
+    padding-right: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-family: myFont;
+        font-weight: 100;
+        margin: 15px;
+    }
+
+    input {
+        background: none;
+        border: none;
+        outline: none;
+        font-size: medium;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .profile_pic {
+            background: url("/assets/user_default.png");
+            background-position: center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+        }
+    }
+}

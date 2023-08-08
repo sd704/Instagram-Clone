@@ -1,11 +1,15 @@
-<h1>Home</h1>
-
-<% if notice %>
-    <p class="notice"><%= notice %></p>
-<% elsif alert %>
-    <p class="alert"><%= alert %></p>
+<div class="wrapper2">
+<% if current_user%>
+    <%= render 'posts/post', post: current_user.posts.first %>
+    <%= render 'posts/post', post: current_user.posts.first %>
+    <%= render 'posts/post', post: current_user.posts.first %>
+    <%= render 'posts/post', post: current_user.posts.first %>
+    <%= render 'posts/post', post: current_user.posts.first %>
+<% else %>
+    <% if notice %>
+        <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+        <p class="alert"><%= alert %></p>
+    <% end %>
 <% end %>
-
-<% if current_user %>
-    <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
-<% end %>
+</div>

@@ -1,0 +1,45 @@
+<!-- Modal -->
+<%= form_with(model: post) do |form| %>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Create new post</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div>
+            <%= form.file_field :images, multiple: true, id: "post-images", required: true %>
+        </div>
+        <div>
+            <div class="user">
+                <% if current_user.profile_pic.attached? %>
+                    <div class="profile_pic" style="background-image: url('<%= current_user.profile_pic %>');"></div>
+                <% else %>
+                    <div class="profile_pic" style="background-image: url('/assets/user_default.png');"></div>
+                <% end %>
+                <p><%= current_user.email %></p>
+            </div>
+
+            <%= form.text_area :caption, rows:8, placeholder:"Write a caption...", class:"form-control border-0", style:"resize:none" %>
+
+            <%= form.check_box :allow_comments, checked: "checked" %>
+            <%= form.label :allow_comments %>
+
+            <br>
+
+            <%= form.check_box :show_likes_count, checked: "checked" %>
+            <%= form.label :show_likes_count %>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <%= form.submit "Post", class:"btn btn-primary" %>
+        <%# <button type="button" class="btn btn-primary">Post</button> %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

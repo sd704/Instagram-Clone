@@ -1,0 +1,106 @@
+.register_container {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+
+    .block1 {
+        padding: 0 40px 25px 40px;
+        border: 1px solid #d3d3d3;
+        border-radius: 8px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin: 40px 0 40px 0;
+            font-family: myFont;
+            font-weight: 100;
+            font-size: 2.8rem;
+        }
+
+        .desc {
+            font-weight: bold;
+            color: grey;
+            margin-bottom: 15px;
+        }
+
+        form {
+            // width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                border: 1px solid #d3d3d3;
+                border-radius: 8px;
+                padding: 10px;
+                background: #fafafa;
+                outline: none;
+            }
+
+            input:focus {
+                border: 1px solid grey;
+            }
+
+            .t_and_c {
+                font-size: small;
+                color: grey;
+
+                a {
+                    text-decoration: none;
+                    color: #385185;
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 8px;
+            background: #0095f6;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 15px;
+
+            img {
+                height: 1rem;
+            }
+        }
+
+        button:hover {
+            background: #385185;
+        }
+
+        button:active {
+            background: #0095f6;
+        }
+    }
+
+    .block2 {
+        width: 100%;
+        border: 1px solid #d3d3d3;
+        border-radius: 8px;
+        padding: 15px 0 15px 0;
+
+        a {
+            color: #0095f6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}

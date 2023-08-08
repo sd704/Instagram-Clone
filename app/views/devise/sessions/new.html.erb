@@ -1,0 +1,28 @@
+<div class="login_container">
+    <div class="image"> </div>
+    <div class="block0">
+        <div class="block1">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <h1>Instagram</h1>
+              <%= f.email_field :email, placeholder: "Email address", required: true %>
+              <%= f.password_field :password, placeholder: "Password", required: true %>
+              <%= f.button "Log in" %>
+            <% end %>
+            <div class="or">
+                <hr>
+                <p>OR</p>
+                <hr>
+            </div>
+            <a href="" class="fb_login"><img src="/assets/facebook.png" alt=""> Log in with Facebook</a>
+            <a href="" class="pass">Forgotten your password?</a>
+        </div>
+        <div class="block2">
+            <p>Don't have an account? <%= link_to "Sign up", new_user_registration_path %></p>
+        </div>
+        <p>Get the app.</p>
+        <div class="block3">
+            <div class="appstore"></div>
+            <div class="playstore"></div>
+        </div>
+    </div>
+</div>

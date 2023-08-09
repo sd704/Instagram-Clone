@@ -1,10 +1,7 @@
 <div class="wrapper2">
 <% if current_user%>
     <%= render 'posts/post', post: current_user.posts.first %>
-    <%= render 'posts/post', post: current_user.posts.first %>
-    <%= render 'posts/post', post: current_user.posts.first %>
-    <%= render 'posts/post', post: current_user.posts.first %>
-    <%= render 'posts/post', post: current_user.posts.first %>
+    <%= render 'posts/post', post: current_user.posts.second %>
 <% else %>
     <% if notice %>
         <p class="notice"><%= notice %></p>

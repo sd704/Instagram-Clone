@@ -1,0 +1,13 @@
+<%= turbo_frame_tag "post#{post.id}actions" do %>
+    <div class="iconbar">
+        <div class="icons">
+            <%= button_to toggle_like_path(post_id: post.id), method: :post, style: "border: none; background: none; outline: none;" do %>
+                <img src="/assets/<%= post.likes.find_by(user: current_user) ? 'heart_red' : 'heart' %>.svg" alt="">
+            <% end %>
+        </div>
+    </div>
+
+    <% if (post.likes.count != 0 ) %>
+        <p class="view_likes"><span><%= pluralize(post.likes.count, "like") %></span></p>
+    <% end %>
+<% end %>
